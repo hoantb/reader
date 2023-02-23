@@ -3,4 +3,4 @@ django-cors-headers==3.13.0
 django-storages==1.13.2
 Pillow==9.4.0
 google-auth
-google-clauth-storage
+google-cloud-storage
