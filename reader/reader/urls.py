@@ -17,11 +17,11 @@ from django.contrib import admin
 from django.urls import path
 from rest_framework.routers import DefaultRouter
 from files.views import FileViewSet
-from books.views import BookiewSet
+from books.views import BookViewSet
 
 router = DefaultRouter()
 router.register(r'api/files', FileViewSet, basename='file')
-router.register(r'api/books', BookiewSet, basename='book')
+router.register(r'api/books', BookViewSet, basename='book')
 
 
 urlpatterns = [
