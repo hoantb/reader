@@ -3,12 +3,19 @@ from books.models import Book
 from django.shortcuts import get_object_or_404
 from books.serializers import BookSerializer
 from rest_framework.response import Response
+from rest_framework import pagination
 
+class BookPagination(pagination.PageNumberPagination):
+    page_size = 4
+    page_size_query_param = 'page_size'
+    max_page_size = 50
 
 class BookiewSet(viewsets.ViewSet):
     """
     Book view set
     """
+    pagination_class = BookPagination
+
     def list(self, request):
         queryset = Book.objects.all()
         serializer = BookSerializer(queryset, many=True)
