@@ -6,12 +6,12 @@ from comments.serializers import CommentBookSerializer
 class BookSerializer(serializers.ModelSerializer):
     image_preview = serializers.SerializerMethodField()
     files = FileSerializer(many=True)
-    comments_book = CommentBookSerializer(many=True)
+    comments = CommentBookSerializer(many=True)
     
 
     class Meta:
         model = Book
-        fields = ('id', 'title', 'image_preview','description', 'files', 'comments_book')
+        fields = ('id', 'title', 'image_preview','description', 'files', 'comments')
     
     def get_image_preview(self, book):
         if book.image_preview:
