@@ -14,5 +14,5 @@ class BookSerializer(serializers.Serializer):
     
     def get_image_preview(self, book):
         if book.image_preview:
-            return book.image_preview.image_preview
+            return book.image_preview.url
         return None
