@@ -42,7 +42,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'books',
-    'files'
+    'files',
+    'visitors',
+    'comments',
 ]
 
 MIDDLEWARE = [
