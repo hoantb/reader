@@ -3,7 +3,7 @@ from books.models import Book
 from files.serializers import FileSerializer
 
 
-class BookSerializer(serializers.Serializer):
+class BookSerializer(serializers.ModelSerializer):
     image_preview = serializers.SerializerMethodField()
     files = FileSerializer(many=True)
     
