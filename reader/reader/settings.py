@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-CSRF_TRUSTED_ORIGINS = ['http://34.124.213.64', 'http://truyenchoban.com']
+CSRF_TRUSTED_ORIGINS = ['http://34.124.213.64', 'http://truyenchoban.com', 'https://truyenchoban.com']
 
 CORS_ALLOW_ALL_ORIGINS = True
 # Application definition
