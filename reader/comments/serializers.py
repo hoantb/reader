@@ -7,11 +7,11 @@ class CommentBookSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = CommentBook
-        fields = ['id', 'visitor', 'message', 'date']
+        fields = ['id', 'visitor', 'comment', 'date']
 
 class CommentFileSerializer(serializers.ModelSerializer):
     visitor = VisitorSerializer()
 
     class Meta:
         model = CommentFile
-        fields = ['id', 'visitor', 'message', 'date']
+        fields = ['id', 'visitor', 'comment', 'date']
