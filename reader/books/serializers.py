@@ -11,7 +11,7 @@ class BookSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Book
-        fields = ('id', 'title', 'image_preview','description', 'files', 'comments')
+        fields = ('id', 'title', 'image_preview','description', 'files', 'comments', 'total_views')
     
     def get_image_preview(self, book):
         if book.image_preview:

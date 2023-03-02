@@ -8,6 +8,7 @@ class File(models.Model):
     file = models.FileField(null=True, blank=True, upload_to='files')
     image_preview = models.ImageField(null=True, blank=True,upload_to='files')
     book = models.ForeignKey(Book, null=True, blank=True, on_delete=models.SET_NULL, related_name='files')
+    total_views = models.IntegerField(null=True, default=0)
     
     def __str__(self):
         return self.title 
