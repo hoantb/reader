@@ -37,8 +37,10 @@ class BookViewSet(viewsets.GenericViewSet, mixins.ListModelMixin):
 
     def retrieve(self, request, pk=None):
         queryset = Book.objects.all()
-        user = get_object_or_404(queryset, pk=pk)
-        serializer = BookSerializer(user)
+        book = get_object_or_404(queryset, pk=pk)
+        book.total_views += 1
+        book.save()
+        serializer = BookSerializer(book)
         return Response(serializer.data)
 
 
