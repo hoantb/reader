@@ -25,8 +25,8 @@ class BookViewSet(viewsets.GenericViewSet, mixins.ListModelMixin):
         return Book.objects.all()
 
     def list(self, request):
-        search_title = request.GET('title', None)
-        filter_type = request.GET('type', None)
+        search_title = request.GET.get('title', None)
+        filter_type = request.GET.get('type', None)
         queryset = self.get_queryset()
         if filter_type == "latest":
             queryset = queryset.order_by('-date_created')
