@@ -25,7 +25,17 @@ class BookViewSet(viewsets.GenericViewSet, mixins.ListModelMixin):
         return Book.objects.all()
 
     def list(self, request):
+        search_title = request.GET('title', None)
+        filter_type = request.GET('type', None)
         queryset = self.get_queryset()
+        if filter_type == "latest":
+            queryset = queryset.order_by('-date_created')
+        elif filter_type == "popular":
+            queryset = queryset.order_by('-total_views')
+        elif filter_type == "rating":
+            queryset = queryset
+        if search_title:
+            queryset = queryset.filter(title__contains=search_title)
         serializer = BookSerializer(queryset, many=True)
         page = self.paginate_queryset(queryset)
         if page is not None:
