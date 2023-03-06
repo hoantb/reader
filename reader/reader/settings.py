@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'files',
     'visitors',
     'comments',
+    'categories'
 ]
 
 MIDDLEWARE = [
