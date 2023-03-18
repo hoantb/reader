@@ -8,6 +8,7 @@ class Book(models.Model):
     total_views = models.IntegerField(null=True, default=0)
     date_created = models.DateTimeField(null=True, blank=True)
     category = models.ForeignKey(BookCategory, on_delete=models.SET_NULL, null=True)
+    author_name = models.TextField(null=True, blank=True)
 
     def __str__(self):
         return self.title
