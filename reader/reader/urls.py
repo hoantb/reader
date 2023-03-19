@@ -18,11 +18,13 @@ from django.urls import path
 from rest_framework.routers import DefaultRouter
 from files.views import FileViewSet
 from books.views import BookViewSet
+from pages.views import PageViewSet
 from categories.views import BookCategoryViewSet
 
 router = DefaultRouter()
 router.register(r'api/files', FileViewSet, basename='file')
 router.register(r'api/books', BookViewSet, basename='book')
+router.register(r'api/pages', BookViewSet, basename='page')
 router.register(r'api/book-categories', BookCategoryViewSet, basename='book-categories')
 
 

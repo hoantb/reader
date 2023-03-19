@@ -11,4 +11,4 @@ class File(models.Model):
     total_views = models.IntegerField(null=True, default=0)
     
     def __str__(self):
-        return self.title 
+        return self.title

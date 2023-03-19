@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'books',
     'files',
+    'pages',
     'visitors',
     'comments',
     'categories'
