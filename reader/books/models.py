@@ -6,7 +6,7 @@ from categories.models import BookCategory
 
 class Book(models.Model):
     def upload_book(instance, file_name):
-        return instance.title + "/" + file_name
+        return instance.storage_name + "/" + file_name
     
     title = models.TextField(null=False, blank=False)
     image_preview = models.ImageField(null=True, blank=True, upload_to=upload_book)
@@ -15,6 +15,7 @@ class Book(models.Model):
     date_created = models.DateTimeField(null=True, blank=True)
     category = models.ForeignKey(BookCategory, on_delete=models.SET_NULL, null=True)
     author_name = models.TextField(null=True, blank=True)
+    storage_name = models.CharField(max_length=256, null=False, blank=False, default="empty", unique=True)
 
     def __str__(self):
         return self.title
