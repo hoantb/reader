@@ -13,6 +13,7 @@ class File(models.Model):
     book = models.ForeignKey(Book, null=True, blank=True, on_delete=models.CASCADE, related_name='files')
     total_views = models.IntegerField(null=True, default=0)
     storage_name = models.CharField(max_length=256, null=False, blank=False, default="empty", unique=True)
+    episode = models.PositiveIntegerField(default=0, null=False, unique=True)
     
     def __str__(self):
         return self.title
