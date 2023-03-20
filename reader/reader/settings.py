@@ -142,8 +142,8 @@ GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
 )
 GS_LOCATION = 'backend'
 # Storage files
-DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
-STATICFILES_STORAGE = 'common.storages.BookFilesStorage'
+STATICFILES_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
+DEFAULT_FILE_STORAGE = 'common.storages.BookFilesStorage'
 
 GS_BUCKET_NAME = 'reader-web-statics'
 
