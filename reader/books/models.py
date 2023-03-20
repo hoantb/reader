@@ -6,7 +6,7 @@ from categories.models import BookCategory
 
 class Book(models.Model):
     def upload_book(instance, file_name):
-        return instance.title
+        return instance.title + "/" + file_name
     
     title = models.TextField(null=False, blank=False)
     image_preview = models.ImageField(null=True, blank=True, upload_to=upload_book)
@@ -22,7 +22,7 @@ class Book(models.Model):
 class BookUpcoming(models.Model):
 
     def upload_book(instance, file_name):
-        return instance.title
+        return instance.title + "/" + file_name
 
     title = models.TextField(null=False, blank=False)
     image_preview = models.ImageField(null=True, blank=True,upload_to=upload_book)
