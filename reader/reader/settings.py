@@ -87,7 +87,7 @@ WSGI_APPLICATION = 'reader.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ittruyen',
+        'NAME': 'ittruyendb',
         'USER': 'ittruyenadmin',
         'PASSWORD': 'Traxanh123',
         'HOST': '35.198.229.213',
