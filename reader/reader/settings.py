@@ -90,7 +90,7 @@ DATABASES = {
         'NAME': 'ittruyendb',
         'USER': 'ittruyenadmin',
         'PASSWORD': 'Traxanh123',
-        'HOST': '35.198.229.213',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }
